@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "62b05e0e-bf4b-4aab-b24f-66e21ae4c56e",
+		"name": "queue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/payTickets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5fcd997f-f992-479f-a1bd-3ef8c6dac810",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearts:eyJhcGkiOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJqd3QiLCJleHAiOiIxNTg0MjQ1MTY3IiwiaWF0IjoiMTU4NDIwMTk2NyIsInVzZXJfbmFtZSI6ImFzIn0=.QD1Y/NYOigDM2ALddBm2gA8r97KuoAAPwXg+bYPO/NI=",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"order_id\":   \"123\",\r\n    \"happen_time\": \"\",\r\n    \"user_id\":  \"22\",\r\n    \"movie_id\":    \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/payTickets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payTickets"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "as",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"disabled": true
+						}
+					]
+				},
+				"description": "抢票"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/addMovie",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5fcd997f-f992-479f-a1bd-3ef8c6dac810",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearts:eyJhcGkiOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJqd3QiLCJleHAiOiIxNTg0MjQ1MTY3IiwiaWF0IjoiMTU4NDIwMTk2NyIsInVzZXJfbmFtZSI6ImFzIn0=.QD1Y/NYOigDM2ALddBm2gA8r97KuoAAPwXg+bYPO/NI=",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n\t\"movieId\":    123,\r\n\t\"movieName \": \"雷姆\",\r\n\t\"watchTime\":  \"90:00\",\r\n\t\"watchPlace\": \"ll\",\r\n\t\"num\":        \"11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/addMovie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addMovie"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "as",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"disabled": true
+						}
+					]
+				},
+				"description": "增加需求抢票的电影"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
